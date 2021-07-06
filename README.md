@@ -1,2 +1,2 @@
-# project1
+# repo_1
 this is my first project

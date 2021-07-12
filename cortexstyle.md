@@ -83,7 +83,7 @@ Motr coding style is based on the Linux kernel coding style, which everyone is a
 In addition to the above syntactic conventions, Motr code should
 try to adhere to some higher level idioms.
 
-  * a loop repeated N times is written
+  * A loop repeated N times is written
 
           for (i = 0; i < N; ++i) {
                   body;

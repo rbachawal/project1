@@ -14,7 +14,7 @@ easier to understand.
 
 Motr coding style is based on the Linux kernel coding style, which everyone is advised to familiarize with at [Linux Kernel Coding Style](https://www.kernel.org/doc/Documentation/process/coding-style.rst).
 
-## Motr Coding Style:
+## Best Practises for Motr Coding Style:
 
   * Tabs are 8 characters;
 

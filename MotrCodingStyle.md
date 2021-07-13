@@ -1,6 +1,6 @@
 # Motr Coding Style
 
-#### Intended Audience
+#### Intended Audience and Purpose
 
 This document is meant for developers who want to contribute to the Motr submodule. The Motr Coding Style document describes the coding style for the Motr project. This document does not describe code documentation practices, they are explained elsewhere.
 

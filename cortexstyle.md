@@ -1,4 +1,6 @@
-# Intended Audience
+# Motr Coding Style
+
+#### Intended Audience
 
 This document describes Motr project coding style. This document
 does NOT describe code documentation practices, they are explained

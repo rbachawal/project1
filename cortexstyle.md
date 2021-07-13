@@ -1,22 +1,18 @@
-# Motr Coding Style 
+# Intended Audience
 
 This document describes Motr project coding style. This document
 does NOT describe code documentation practices, they are explained
 elsewhere.
 
-The first thing to remember is that a primary purpose that a coding
-style exists for is to make understanding code easier for a project
+The first thing to remember is that a coding
+style exists for us to make understanding code easier for a project
 participant. To this end, a code should be as uniform and idiomatic as
 possible similarly with the properties that make usual human speech
 easier to understand.
 
 Motr coding style is based on the Linux kernel coding style, which everyone is advised to familiarize with at [Linux Kernel Coding Style](https://www.kernel.org/doc/Documentation/process/coding-style.rst).
 
-#### 1.To Summarise:
-
-<details>
-  <summary>Click to expand!</summary>
-  <p>
+## Motr Coding Style:
 
   * Tabs are 8 characters;
 
@@ -418,14 +414,11 @@ try to adhere to some higher level idioms.
       analysis. Reporting leaf errors is more important, because
       call-chain can usually be traced upward easily.
       
-      </p>
-      </details>
-
-
-#### 2.Things to look after:
+      
+#### Things to look after:
 
 <details>
-  <summary>Click to expand!</summary>
+  <summary>Things to Consider!</summary>
   <p>
 
   * Locks should outlive the object(s) they are protecting.
@@ -477,7 +470,7 @@ The following is not a substitute for design guidelines, which are defined
 elsewhere.
 
 <details>
-  <summary>Click to expand!</summary>
+  <summary>For Guidelines!</summary>
   <p>
 
 Traditional code organization techniques, taught in universities, include
@@ -546,15 +539,14 @@ Some concrete consequences:
     </details>
 
 ## You're All Set & You are Awesome!
-____  __________________________________________________________________________________________________________________________________________________________________________
+
+ We Thank you for stopping by to check out the CORTX Community. We are fully dedicated to our mission to build open source technologies that help the world save unlimited data and solve challanging data problems. Join our mission  to help reinvent a data-driven world.
     
- We thanks you for stopping by to check  out the CORTX Community. We are fully dedicated to our mission to build open source technologies that help the world save unlimited data and solve challanging data problems. Join our mission  to help reinvent a data-driven world.
-    
- ### Contribute to CORTX Managemental Protal 
+### Contribute to CORTX Managemental Protal 
     
  Please contribute to the [CORTX Open Source project](https://github.com/Seagate/cortx-management-portal/blob/main/docs/CONTRIBUTING.md) and join our movement to make data storage better, efficient, and more accessible.
     
-#### Reach Out to Us
+### Reach Out to Us
     
 You can reach out to us with your questions, feedback, and comments through our [CORTX Communication Channels](/SUPPORT.md
 

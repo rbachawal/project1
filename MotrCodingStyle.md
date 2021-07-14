@@ -5,6 +5,7 @@
     * [2.1 Things to Consider](#21-things-to-consider)
     * [2.2 Code Organization Guidelines](22-code-organization-guidelines)
 
+
 ## 1.0 Intended Audience and Purpose
 
 This document is meant for developers who want to contribute to the Motr submodule. The Motr Coding Style document describes the coding style for the Motr project. This document does not describe code documentation practices, they are explained elsewhere.

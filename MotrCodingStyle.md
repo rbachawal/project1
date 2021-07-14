@@ -1,11 +1,11 @@
 # Motr Coding Style
 
-* [Intended Audience and Purpose](https://github.com/rbachawal/project1/blob/main/MotrCodingStyle.md#intended-audience-and-purpose)
-* [Motr Coding Style Guidelines](https://github.com/rbachawal/project1/blob/main/MotrCodingStyle.md#motr-coding-style-guidelines)
-* [Things to Consider](https://github.com/rbachawal/project1/blob/main/MotrCodingStyle.md#things-to-consider)
-* [Code Organization Guidelines](https://github.com/rbachawal/project1/blob/main/MotrCodingStyle.md#code-organization-guidelines)
+* [1.0 Intended Audience and Purpose](https://github.com/rbachawal/project1/blob/main/MotrCodingStyle.md#intended-audience-and-purpose)
+* [2.0 Motr Coding Style Guidelines](https://github.com/rbachawal/project1/blob/main/MotrCodingStyle.md#motr-coding-style-guidelines)
+* [2.1 Things to Consider](https://github.com/rbachawal/project1/blob/main/MotrCodingStyle.md#things-to-consider)
+* [2.2 Code Organization Guidelines](https://github.com/rbachawal/project1/blob/main/MotrCodingStyle.md#code-organization-guidelines)
 
-#### Intended Audience and Purpose
+#### 1.0 Intended Audience and Purpose
 
 This document is meant for developers who want to contribute to the Motr submodule. The Motr Coding Style document describes the coding style for the Motr project. This document does not describe code documentation practices, they are explained elsewhere.
 
@@ -13,7 +13,7 @@ The first thing to remember is that a coding style exists for us to make underst
 
 Motr coding style is based on the Linux kernel coding style, which everyone is advised to familiarize with at [Linux Kernel Coding Style](https://www.kernel.org/doc/Documentation/process/coding-style.rst).
 
-## Motr Coding Style Guidelines
+## 2.0 Motr Coding Style Guidelines
 
   * Tabs are 8 characters;
 
@@ -422,7 +422,7 @@ try to adhere to some higher-level idioms.
       call-chain can usually be traced upward easily.
       
       
-## Things to Consider
+## 2.1 Things to Consider
 
 Apart from the coding style guidelines, we've listed some pointers that would help you make better and accurate contributions.
 
@@ -473,7 +473,7 @@ Apart from the coding style guidelines, we've listed some pointers that would he
       </p>
       </details>
 
-## Code Organization Guidelines
+## 2.2 Code Organization Guidelines
 
 The following is not a substitute for design guidelines, which are defined elsewhere.
 

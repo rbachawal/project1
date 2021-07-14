@@ -99,7 +99,7 @@ try to adhere to some higher-level idioms.
                   enum reason   mit_why;
           };
 
-      Rationale: this makes the search for field name usage easier.
+      **Rationale:** this makes the search for field name usage easier.
 
   * Typedefs are used only for "scalar" data types, including
     function pointers, but excluding enums. Compound data types
@@ -111,7 +111,7 @@ try to adhere to some higher-level idioms.
 
           struct foo *bar = m0_alloc(sizeof *bar);
 
-      Rationale: when bar's type changes code remains correct;
+      **Rationale:** when bar's type changes code remains correct;
 
 
   * To iterate over indices of an array X use ARRAY_SIZE(X) macro
@@ -126,7 +126,7 @@ try to adhere to some higher-level idioms.
           }
 
 
-      Rationale: when array's declaration changes code remains correct;
+      **Rationale:** when array's declaration changes code remains correct;
 
   * In the spirit of the two examples above, always try to make the
     code as autonomous as possible, so that the code correctness
@@ -159,7 +159,7 @@ try to adhere to some higher-level idioms.
       `(x)` or `(!x)` respectively;
 
 
-      Rationale: if `(x == true)` is clearer than `(x)`, then `((x == true) == true)`
+      **Rationale:** if `(x == true)` is clearer than `(x)`, then `((x == true) == true)`
       is even more clearer.
 
 
@@ -198,7 +198,7 @@ try to adhere to some higher-level idioms.
 
   * Avoid implicit field initialization using designated initializers;
 
-      Rationale: it helps to find all struct field usage and it documents the
+      **Rationale:** it helps to find all struct field usage and it documents the
       default value of the field;
 
   * Use enums to define numerical constants:
@@ -213,12 +213,12 @@ try to adhere to some higher-level idioms.
                   LHP_FACTOR2
           };
 
-      Rationale: enums (as opposed to #defines) have types, visible
+      **Rationale:** enums (as opposed to #defines) have types, visible
       in a debugger, etc.
 
   * Inline functions are preferable to macros
 
-     Rationale: type-checking, sane argument evaluation rules;
+     **Rationale:** type-checking, sane argument evaluation rules;
 
 
   * Not inline functions are preferable to inline functions, unless
@@ -259,7 +259,7 @@ try to adhere to some higher-level idioms.
                   ...
           }
 
-      Rationale: with this convention statement coverage metric is more adequate;
+      **Rationale:** with this convention statement coverage metric is more adequate;
 
   * Use C precedence rules to omit noise in _obvious_ expressions:
 
@@ -275,14 +275,14 @@ try to adhere to some higher-level idioms.
   * Factor common code. Always prefer creating a common helper
     function to copying code
 
-      Rationale: avoids duplication of bugs;
+      **Rationale:** avoids duplication of bugs;
 
   * Use standard scalar data type with explicit width, instead of
     "long" or "int".  E.g., int32_t, int64_t, uint32_t, uint64_t
     should be used to represent 32-bits, 64-bits integers, unsigned
     32-bits unsigned 64-bits integers respectively
 
-      Rationale: avoids inconsistent data structures on different arch;
+      **Rationale:** avoids inconsistent data structures on different arch;
 
   * No comparison between signed vs. unsigned without explicit casting;
 
@@ -298,7 +298,7 @@ try to adhere to some higher-level idioms.
   * Avoid bit-fields. Instead, use explicit bit manipulations with
     integer types;
 
-      Rationale: eliminates non-atomic access to bit-fields and implicit
+      **Rationale:** eliminates non-atomic access to bit-fields and implicit
       integer promotion.
 
   * Avoid dead assignments and initializations (i.e., assignments
@@ -314,7 +314,7 @@ try to adhere to some higher-level idioms.
       Instead, initialize a variable with a meaningful value, when the
       latter is known.
 
-      Rationale: dead initializations potentially hide errors. If,
+      **Rationale:** dead initializations potentially hide errors. If,
       after the code restructuring, the variable remains
       un-initialized in a conditional branch or in a loop that might
       execute 0 times, the initializer suppresses compiler warning;
@@ -353,7 +353,7 @@ try to adhere to some higher-level idioms.
     on the #include line.
 
 
-      Rationale: reduces dependencies between modules, makes inclusion tree
+      **Rationale:** reduces dependencies between modules, makes inclusion tree
       re-structuring easier and compilation faster.
 
   * Use M0_LOG() from lib/trace.h instead of printf(3)/printk() in
@@ -396,7 +396,7 @@ try to adhere to some higher-level idioms.
 
           return M0_ERR(-EIO);
 
-      (an error, returned by a non-Motr function, is considered leaf).
+      an error, returned by a non-Motr function, is considered leaf.
 
       A non-leaf errors should be reported optionally, when this
       doesn't lead to artificial code complication for reporting
@@ -412,7 +412,7 @@ try to adhere to some higher-level idioms.
           ...
           return result == 0 ? M0_RC(0) : M0_ERR(result);
 
-      Rationale: error reporting through M0_ERR() is important for log
+      **Rationale:** error reporting through M0_ERR() is important for log
       analysis. Reporting leaf errors is more important, because
       call-chain can usually be traced upward easily.
       
@@ -422,12 +422,12 @@ try to adhere to some higher-level idioms.
 Apart from the coding style guidelines, we've listed some pointers that would help you make better and accurate contributions.
 
 <details>
-  <summary>Click to expand</summary>
+  <summary>Click to view</summary>
   <p>
 
   * Locks should outlive the object(s) they are protecting.
 
-      i). The code below illustrates a common mistake:
+      i. The code below illustrates a common mistake:
 
           struct foo {
                   ...
@@ -473,7 +473,7 @@ Apart from the coding style guidelines, we've listed some pointers that would he
 The following is not a substitute for design guidelines, which are defined elsewhere.
 
 <details>
-  <summary>Click here to view!</summary>
+  <summary>Click to view!</summary>
   <p>
 
 Traditional code organization techniques, taught in universities, include
@@ -519,7 +519,7 @@ Some concrete consequences:
     at once is very important if you stare at it for hours. Blank lines are
     precious resource;
 
-  * all kinds of redundant Hungarian notations should be eschewed. For
+  * All kinds of redundant Hungarian notations should be eschewed. For
     example, don't put information about parameters in the function name, because
     parameters are already present at a call site. A typical call for
     m0_mod_call_with_bar() would look like m0_mod_call_with_bar(foo, bar). Not

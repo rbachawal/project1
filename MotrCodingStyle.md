@@ -1,6 +1,6 @@
 # Motr Coding Style
 
-* [1.0 Intended Audience and Purpose](https://github.com/rbachawal/project1/blob/main/MotrCodingStyle.md#intended-audience-and-purpose)
+* [1.0 Intended Audience and Purpose](#10-Intended-Audience-and-Purpose)
 * [2.0 Motr Coding Style Guidelines](https://github.com/rbachawal/project1/blob/main/MotrCodingStyle.md#motr-coding-style-guidelines)
 * [2.1 Things to Consider](https://github.com/rbachawal/project1/blob/main/MotrCodingStyle.md#things-to-consider)
 * [2.2 Code Organization Guidelines](https://github.com/rbachawal/project1/blob/main/MotrCodingStyle.md#code-organization-guidelines)

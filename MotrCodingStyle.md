@@ -1,10 +1,8 @@
 # Motr Coding Style
 
-#### Intended Audience
+#### Intended Audience and Purpose
 
-This document describes Motr project coding style. This document
-does NOT describe code documentation practices, they are explained
-elsewhere.
+This document is meant for developers who want to contribute to the Motr submodule. The Motr Coding Style document describes the coding style for the Motr project. This document does not describe code documentation practices, they are explained elsewhere.
 
 The first thing to remember is that a coding style exists for us to make understanding code easier for a project participant. To this end, a code should be as uniform and idiomatic as possible similarly to the properties that make usual human speech easier to understand.
 
@@ -101,7 +99,7 @@ try to adhere to some higher-level idioms.
                   enum reason   mit_why;
           };
 
-      (Rationale: his makes search for field name usage easier.)
+      (Rationale: this makes search for field name usage easier.)
 
   * Typedefs are used only for "scalar" data types, including
     function pointers, but excluding enums. Compound data types
@@ -113,7 +111,8 @@ try to adhere to some higher-level idioms.
 
           struct foo *bar = m0_alloc(sizeof *bar);
 
-      (Rationale: when bar's type changes code remains correct.);
+      Rationale: when bar's type changes code remains correct;
+
 
   * To iterate over indices of an array X use ARRAY_SIZE(X) macro
     instead of an explicit array size:
@@ -126,7 +125,8 @@ try to adhere to some higher-level idioms.
                   body;
           }
 
-      (Rationale: when array's declaration changes code remains correct.);
+
+      Rationale: when array's declaration changes code remains correct;
 
   * In the spirit of the two examples above, always try to make the
     code as autonomous as possible, so that the code correctness
@@ -158,8 +158,10 @@ try to adhere to some higher-level idioms.
       Specifically, never use `(x == true)` or `(x == false)` instead of
       `(x)` or `(!x)` respectively;
 
-      (Rationale: if `(x == true)` is clearer than `(x)`, then `((x == true) == true)`
-      is even more clearer.)
+
+      Rationale: if `(x == true)` is clearer than `(x)`, then `((x == true) == true)`
+      is even more clearer.
+
 
   * Use `!!x` to convert a "boolean" integer into an "arithmetic" integer;
 
@@ -196,8 +198,8 @@ try to adhere to some higher-level idioms.
 
   * Avoid implicit field initialization using designated initializers;
 
-      (Rationale: it helps to find all struct field usage and it documents the
-      default value of the field.);
+      Rationale: it helps to find all struct field usage and it documents the
+      default value of the field;
 
   * Use enums to define numerical constants:
 
@@ -211,19 +213,20 @@ try to adhere to some higher-level idioms.
                   LHP_FACTOR2
           };
 
-      (Rationale: enums (as opposed to #defines) have types, visible
-      in a debugger, etc.)
+      Rationale: enums (as opposed to #defines) have types, visible
+      in a debugger, etc.
 
   * Inline functions are preferable to macros
 
-      (Rationale: type-checking, sane argument evaluation rules.);
+     Rationale: type-checking, sane argument evaluation rules;
+
 
   * Not inline functions are preferable to inline functions, unless
     performance measurements show otherwise.
 
-      (Rationale: breakpoint can be placed within a non-inline function. The Stack
+      Rationale: breakpoint can be placed within a non-inline function. The Stack
       trace is more reliable with non-inline functions. Instruction cache
-      pollution is reduced.);
+      pollution is reduced;
 
   * Macros should be used only when other language constructs cannot
     achieve the required goal. When creating macro take care to:
@@ -256,7 +259,7 @@ try to adhere to some higher-level idioms.
                   ...
           }
 
-      (Rationale: with this convention statement coverage metric is more adequate.);
+      Rationale: with this convention statement coverage metric is more adequate;
 
   * Use C precedence rules to omit noise in _obvious_ expressions:
 
@@ -272,14 +275,14 @@ try to adhere to some higher-level idioms.
   * Factor common code. Always prefer creating a common helper
     function to copying code
 
-      (Rationale: avoids duplication of bugs.);
+      Rationale: avoids duplication of bugs;
 
   * Use standard scalar data type with explicit width, instead of
     "long" or "int".  E.g., int32_t, int64_t, uint32_t, uint64_t
     should be used to represent 32-bits, 64-bits integers, unsigned
     32-bits unsigned 64-bits integers respectively
 
-      (Rationale: avoids inconsistent data structures on different arch);
+      Rationale: avoids inconsistent data structures on different arch;
 
   * No comparison between signed vs. unsigned without explicit casting;
 
@@ -295,8 +298,8 @@ try to adhere to some higher-level idioms.
   * Avoid bit-fields. Instead, use explicit bit manipulations with
     integer types;
 
-      (Rationale: eliminates non-atomic access to bit-fields and implicit
-      integer promotion.)
+      Rationale: eliminates non-atomic access to bit-fields and implicit
+      integer promotion.
 
   * Avoid dead assignments and initializations (i.e., assignments
     which are overwritten before the variable is read)
@@ -311,10 +314,10 @@ try to adhere to some higher-level idioms.
       Instead, initialize a variable with a meaningful value, when the
       latter is known.
 
-      (Rationale: dead initializations potentially hide errors. If,
+      Rationale: dead initializations potentially hide errors. If,
       after the code restructuring, the variable remains
       un-initialized in a conditional branch or in a loop that might
-      execute 0 times, the initializer suppresses compiler warning.);
+      execute 0 times, the initializer suppresses compiler warning;
 
   * All header files should begin with '#pragma once' followed by a
     conventional '#ifndef' include guard:
@@ -349,8 +352,9 @@ try to adhere to some higher-level idioms.
     defined in this header) these symbols should be mentioned in the comment
     on the #include line.
 
-      (Rationale: reduces dependencies between modules, makes inclusion tree
-      re-structuring easier and compilation faster.).
+
+      Rationale: reduces dependencies between modules, makes inclusion tree
+      re-structuring easier and compilation faster.
 
   * Use M0_LOG() from lib/trace.h instead of printf(3)/printk() in
     all source files which are part of libmotr.so library or
@@ -413,10 +417,12 @@ try to adhere to some higher-level idioms.
       call-chain can usually be traced upward easily.
       
       
-#### Things to Consider:
+## Things to Consider
+
+Apart from the coding style guidelines, we've listed some pointers that would help you make better and accurate contributions.
 
 <details>
-  <summary>Click here to view!</summary>
+  <summary>Click to expand</summary>
   <p>
 
   * Locks should outlive the object(s) they are protecting.
@@ -464,8 +470,7 @@ try to adhere to some higher-level idioms.
 
 ## Code Organization Guidelines
 
-The following is not a substitute for design guidelines, which are defined
-elsewhere.
+The following is not a substitute for design guidelines, which are defined elsewhere.
 
 <details>
   <summary>Click here to view!</summary>

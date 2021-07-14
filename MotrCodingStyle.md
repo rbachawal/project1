@@ -1,5 +1,10 @@
 # Motr Coding Style
 
+* [Intended Audience and Purpose](https://github.com/rbachawal/project1/blob/main/MotrCodingStyle.md#intended-audience-and-purpose)
+* [Motr Coding Style Guidelines](https://github.com/rbachawal/project1/blob/main/MotrCodingStyle.md#motr-coding-style-guidelines)
+* [Things to Consider](https://github.com/rbachawal/project1/blob/main/MotrCodingStyle.md#things-to-consider)
+* [Code Organization Guidelines](https://github.com/rbachawal/project1/blob/main/MotrCodingStyle.md#code-organization-guidelines)
+
 #### Intended Audience and Purpose
 
 This document is meant for developers who want to contribute to the Motr submodule. The Motr Coding Style document describes the coding style for the Motr project. This document does not describe code documentation practices, they are explained elsewhere.
@@ -547,7 +552,7 @@ Some concrete consequences:
     
 ### Contribute to CORTX Managemental Portal 
     
- Please contribute to the [CORTX Open Source project](https://github.com/Seagate/cortx-management-portal/blob/main/docs/CONTRIBUTING.md) and join our movement to make data storage better, efficient, and more accessible.
+ Please contribute to the [CORTX Open Source project](https://github.com/Seagate/cortx/blob/main/doc/SuggestedContributions.md) and join our movement to make data storage better, efficient, and more accessible.
     
 ### Reach Out to Us
     

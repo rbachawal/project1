@@ -14,7 +14,7 @@ Motr coding style is based on the Linux kernel coding style, which everyone is a
 
   * Block indentation is done with tabs;
 
-  * Braces placement and spacing is as following:
+  * Braces placement and spacing is as follows:
 
           if (condition) {
                   branch0;
@@ -99,7 +99,7 @@ try to adhere to some higher-level idioms.
                   enum reason   mit_why;
           };
 
-      (Rationale: this makes search for field name usage easier.)
+      Rationale: this makes the search for field name usage easier.
 
   * Typedefs are used only for "scalar" data types, including
     function pointers, but excluding enums. Compound data types
@@ -246,7 +246,7 @@ try to adhere to some higher-level idioms.
     failure conditions;
 
   * Use "const" as documentation and help for type-checker. Do not
-    use casts to trick type-checking system into believing your
+    use casts to trick the type-checking system into believing your
     consts. A typical scenario is a function that doesn't modify its
     input struct argument except for taking and releasing a lock
     inside of the struct. Don't use "const" in this case. Instead,
@@ -523,7 +523,7 @@ Some concrete consequences:
     example, don't put information about parameters in the function name, because
     parameters are already present at a call site. A typical call for
     m0_mod_call_with_bar() would look like m0_mod_call_with_bar(foo, bar). Not
-    only "bar" is redundant, it is also ugly. Use thesaurus to deal with
+    only "bar" is redundant, it is also ugly. Use a thesaurus to deal with
     "call_with_x" vs. "call_with_y";
 
   * Wrapping field access in an accessor function is a gratuitous abstraction,

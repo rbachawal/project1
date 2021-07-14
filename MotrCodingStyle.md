@@ -113,6 +113,7 @@ try to adhere to some higher-level idioms.
 
       Rationale: when bar's type changes code remains correct;
 
+
   * To iterate over indices of an array X use ARRAY_SIZE(X) macro
     instead of an explicit array size:
 
@@ -123,6 +124,7 @@ try to adhere to some higher-level idioms.
           for (i = 0; i < ARRAY_SIZE(degrees_of_separation); ++i) {
                   body;
           }
+
 
       Rationale: when array's declaration changes code remains correct;
 
@@ -156,8 +158,10 @@ try to adhere to some higher-level idioms.
       Specifically, never use `(x == true)` or `(x == false)` instead of
       `(x)` or `(!x)` respectively;
 
+
       Rationale: if `(x == true)` is clearer than `(x)`, then `((x == true) == true)`
       is even more clearer.
+
 
   * Use `!!x` to convert a "boolean" integer into an "arithmetic" integer;
 
@@ -215,6 +219,7 @@ try to adhere to some higher-level idioms.
   * Inline functions are preferable to macros
 
      Rationale: type-checking, sane argument evaluation rules;
+
 
   * Not inline functions are preferable to inline functions, unless
     performance measurements show otherwise.
@@ -346,6 +351,7 @@ try to adhere to some higher-level idioms.
     included only for a few definitions (as opposed to for a whole interface
     defined in this header) these symbols should be mentioned in the comment
     on the #include line.
+
 
       Rationale: reduces dependencies between modules, makes inclusion tree
       re-structuring easier and compilation faster.

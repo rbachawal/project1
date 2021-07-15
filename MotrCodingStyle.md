@@ -476,12 +476,12 @@ Apart from the coding style guidelines, we've listed some pointers that would he
 
 ## 2.2 Code Organization Guidelines
      
-<details>
+The following is not a substitute for design guidelines, which are defined elsewhere.
+     
+ <details>
   <summary>Click to view</summary>
   <p>
      
-The following is not a substitute for design guidelines, which are defined elsewhere.
-
 Traditional code organization techniques, taught in universities, include
 modularity, layering, information hiding, and maintaining abstraction
 boundaries. They tend to produce code, which is easy to modify and refactor,

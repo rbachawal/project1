@@ -3,7 +3,7 @@
 * [1.0 Intended Audience and Purpose](#10-intended-audience-and-purpose)
 * [2.0 Motr Coding Style Guidelines](#20-motr-coding-style-guidelines)
     * [2.1 Things to Consider](#21-things-to-consider)
-    * [2.2 Code Organization Guidelines](22-code-organization-guidelines)
+    * [2.2 Code Organization Guidelines](#22-code-organization-guidelines)
 
 
 ## 1.0 Intended Audience and Purpose
@@ -478,10 +478,6 @@ Apart from the coding style guidelines, we've listed some pointers that would he
 
 The following is not a substitute for design guidelines, which are defined elsewhere.
 
-<details>
-  <summary>Click to view!</summary>
-  <p>
-
 Traditional code organization techniques, taught in universities, include
 modularity, layering, information hiding, and maintaining abstraction
 boundaries. They tend to produce code, which is easy to modify and refactor,
@@ -544,10 +540,7 @@ Some concrete consequences:
     data structures, and operation vectors should not be created simply to
     "keep things small". Remember, that in the long term, refactoring is easy.
     
-    </p>
-    </details>
-
-## You're All Set & You are Awesome!
+ ## You're All Set & You are Awesome!
 
  We Thank you for stopping by to check out the CORTX Community. We are fully dedicated to our mission to build open source technologies that help the world save unlimited data and solve challenging data problems. Join our mission to help reinvent a data-driven world.
     
@@ -557,6 +550,6 @@ Some concrete consequences:
     
 ### Reach Out to Us
     
-You can reach out to us with your questions, feedback, and comments through our [CORTX Communication Channels](/SUPPORT.md
+You can reach out to us with your questions, feedback, and comments through our cortx-questions@seagate.com
 
 

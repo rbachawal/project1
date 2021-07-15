@@ -475,7 +475,11 @@ Apart from the coding style guidelines, we've listed some pointers that would he
       </details>
 
 ## 2.2 Code Organization Guidelines
-
+     
+<details>
+  <summary>Click to view</summary>
+  <p>
+     
 The following is not a substitute for design guidelines, which are defined elsewhere.
 
 Traditional code organization techniques, taught in universities, include
@@ -539,8 +543,10 @@ Some concrete consequences:
     e.g., to mark a point of possible variability. Sub-modules,
     data structures, and operation vectors should not be created simply to
     "keep things small". Remember, that in the long term, refactoring is easy.
-    
- ## You're All Set & You are Awesome!
+     
+     </p>
+     </details>
+   ## You're All Set & You are Awesome!
 
  We Thank you for stopping by to check out the CORTX Community. We are fully dedicated to our mission to build open source technologies that help the world save unlimited data and solve challenging data problems. Join our mission to help reinvent a data-driven world.
     
